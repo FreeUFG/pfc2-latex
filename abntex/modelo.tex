@@ -1,0 +1,262 @@
+\NeedsTeXFormat{LaTeX2e}
+%-----------------------------------------------------------
+\documentclass[a4paper,12pt]{monografia}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage[mathcal]{eucal}
+\usepackage{latexsym}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{bm}
+\usepackage[all]{xy}
+\usepackage[pdftex]{graphicx}
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{axiom}{Axioma}[section]
+\newtheorem{corollary}{Corolário}[section]
+\newtheorem{lemma}{Lema}[section]
+\newtheorem{proposition}{Proposição}[section]
+%-----------------------------------------------------------
+\theoremstyle{definition}
+\newtheorem{definition}{Definição}[section]
+\newtheorem{example}{Exemplo}[section]
+%-----------------------------------------------------------
+\theoremstyle{remark}
+\newtheorem{remark}{Observação}[section]
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\id}{\mathbf{1}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\V}{{\cal V}}
+%-----------------------------------------------------------
+\def\ind{\hbox{ ind }}
+%-----------------------------------------------------------
+\begin{document}
+%
+%----------------- Título e Dados do Autor -----------------
+\titulo{Monografia - Curso de Ciências da Computação}
+%\subtitulo{- Fazendo uso da classe MONOGRAFIA -} % opcional
+\autor{Marcos Wagner de Souza Ribeiro} \nome{Marcos Wagner} \ultimonome{Souza Ribeiro}
+%
+%---------- Informe o Curso e Grau -----
+\bacharelado \curso{Ciências da Computação} \ano{2012}
+\data{10 de dezembro de 2012} % data da aprovação
+\cidade{Jataí-GO}
+%
+%----------Informações sobre a Instituição -----------------
+\instituicao{Universidade Federal de Goiás} \sigla{UFG}
+\unidadeacademica{Campus Jataí }
+%
+%-------- Informações obtidas na Biblioteca ----------------
+%
+\CDU{000.00} \areas{1.   2.  }
+\npaginas{xx}  % total de páginas do trabalho
+%------Nomes do Orientador, 1o. Examinador e 2o. Examinador-
+\orientador{Marcos Wagner de Souza Ribeiro}
+%
+%\coorientador{Nome do Co-orientador} % opcional
+%
+\examinadorum{Nome do Examinador 1}
+%
+\examinadordois{Nome do Examinador 2}
+%
+%\examinadortres{Nome do Examinador 3}
+%
+%\examinadorquatro{Nome do Examinador 4}
+%--------- Títulos do Orientador 1o. e 2o. Examinadores ----
+\ttorientador{Doutor em Engenharia Elétrica}
+%
+%\ttcoorientador{Título do Co-orientador} % se digitado \coorientador
+%
+\ttexaminadorum{Título do Examinador 1}
+%
+\ttexaminadordois{Título do Examinador 2}
+%
+%\ttexaminadortres{Título do Examinador 3}
+%
+%\ttexaminadorquatro{Título do Examinador 4}
+%
+\maketitle
+%----------------------------dedicatória  opcional--------------
+\begin{dedicatoria}
+Aos meus pais e irmã.\\
+Aos amigos, pelo apoio e companheirismo.\\
+\end{dedicatoria}
+%----------------------------Agradecimentos-------------------------------
+\begin{agradecimentos}
+
+Agradeço primeiramente a Deus, que permitiu a finalização de uma mais uma etapa em minha vida. Ao professor ..... E, a todos aqueles que contribuíram de forma direta ou indireta para a realização deste trabalho.
+
+\end{agradecimentos}
+\newpage
+%---------------------- EPÍGRAFE I (OPCIONAL)--------------
+\begin{epigrafe}
+``Pesquisar é se incomodar com a verdade''.\\
+\hfill Fulano de Tal
+\end{epigrafe}%--------Digite aqui o seu resumo em Português--------------
+\resumo{Resumo} Resumo na língua vernácula, elaborado em folha separada, deve indicar, concisamente, os pontos relevantes do trabalho: objeto de estudo, problema, tema objetivos, justificativas,  metodologia, resultados esperados ou obtidos, o valor científico do trabalho e sua originalidade, contendo, no máximo 400 palavras e no mínimo 200. Deve ser composto de uma sequência de frases concisas e não deve ser elaborado na forma de tópicos. Deve ser seguido das palavras-chave ou descritores, precedido de dois espaços simples, tendo no mínimo de 3 e no máximo de 5 palavras, isto é, inserir palavras que mais representam o conteúdo do trabalho, ressaltando que as mesmas devem vir separadas por ponto. O resumo deve ser em texto corrido e sem parágrafo, digitado em espaço simples.
+
+\noindent Palavras-chaves: Palavra1; Palavra2; Palavra3.
+
+%-----------Digite aqui o seu resumo em Inglês--------------
+\resumo{Abstract} Abstract (Resumo na língua estrangeira),contém as orientações do resumo em língua estrangeira, digitado em folha separada. Por ser elaborado em idioma de comunicação internacional (inglês - Abstract). Deve, também, ser seguido das palavras-chave (inglês - Keywords). Os critérios de formatação do Abstract seguem os mesmos do Resumo na língua vernácula. .
+
+\noindent Keywords: Keywords1; Keywords2; Keywords3.
+
+%----Sumário, lista de figura e de tabela ------------
+\tableofcontents \thispagestyle{empty} %\listoffigures
+%\thispagestyle{empty} \listoftables \thispagestyle{empty}
+%---------------------
+
+%--------------Início do Conteúdo---------------------------
+\pagestyle{ruledheader}
+\chapter{Introdução}
+\section{Motivação (objeto de estudo e problema)}
+\section{Objetivo do Trabalho}
+\section{Referencial Teórico Resumido}
+\section{Contribuição do Trabalho}
+\section{Organização da Monografia}
+\indent\indent O trabalho está dividido em sete capítulos, descritos resumidamente a seguir:
+\indent Por último têm-se as referências bibliográficas aqui utilizadas.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAPÍTULO I %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Capítulo I - Referencial Teórico}
+\section{Introdução}
+\indent\indent Este capítulo apresenta as principais características para construção de uma monografia. O referencial teórico do tema é apresentado nesta seção, ou seja, todo o conceito do trabalho deve ser descrito indicando por meio de referências, as bibliografias dos trabalhos que foram publicados sobre o tema, e que permitem o autor conceituar o assunto.
+\section{Formatação da monografia}
+\indent Os textos devem ser apresentados em papel branco, formato A4. Deverá ser digitado em tinta cor preta, com exceção de ilustrações. As folhas deverão apresentar margem esquerda e superior de 3 cm; direita e inferior de 2 cm.
+Para digitação, utiliza-se fonte Times New Roman 12 para o texto e 10 para a citações de mais de três linha, notas de rodapé. Utiliza-se espaço 1,5 ou 2 para o corpo do texto e espaçamento simples para citações com mais de três linhas.
+Os títulos das partes, ou capítulos devem ser separados do texto que os precede e devem ser iniciados em página própria não numerada e digitados em espaço 1,5 centralizado e em negrito. Toda página nova deve ser reconfigurada, mantendo 8 cm da borda superior e não deve ser numerada.
+As legendas devem ser colocadas juntamente com as tabelas e ilustrações (tabelas acima e ilustrações abaixo). Devem ser centralizadas, realçadas com negrito e fonte Times New Roman 11. A tabela \ref{tab1} é um exemplo. 
+
+
+\begin{table}
+\caption{Modelo de Tabela com referência \cite{el}}  
+ \begin{center}
+  \begin{tabular}{c|c|c|c}
+   \hline
+   Características & DCOM & CORBA & JAVA \\
+   \hline
+   1000 & 2000 & 3000 & 1000 \\
+   4000 & 2000 & 3000 & 1000 \\
+   5000 & 3000 & 1000 & 1000 \\
+   \hline
+  \end{tabular}
+  \label{tab1}
+ \end{center}
+\end{table}
+
+ 
+\indent Tabela \ref{tab1} mostra as principais diferenças entre as plataformas estudadas ressaltando a escolha por CORBA.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=15cm, height=6cm]{Fig1.pdf}
+\caption{Modelo de Figura}
+\label{fig1:exem}
+\end{figure}
+ 
+
+	A Figura \ref{fig1} mostra o ORB - Object Request Broker como elemento principal, pois tem a função de localizar objetos instanciados no servidor, estabelecer conexão com esses objetos, passar os parâmetros necessários e receber  os valores resultantes da requisição. 
+\section{Considerações Finais}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAPÍTULO II %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Capítulo II - Trabalhos Relacionados}
+\section{Introdução}
+\indent\indent 
+Os trabalhos relacionados podem vir numa seção própria separada, ou na sequência do referencial teórico. Nesta seção, uma das mais importantes de uma monografia, o autor apresenta trabalhos relacionados ao seu (Estado da Arte), e demonstra a relevância e principalmente sua contribuição. Na análise dos trabalhos relacionados é necessário que autor use uma metodologia única para todos os trabalhos. Esta metodologia pode ser criada ou aproveitada de outras pesquisas.  Em trabalhos em que o objetivo é a comparação e análise de tecnologias/pesquisas/outros trabalhos, a contribuição pode ser apenas a própria metodologia de análise. E, mesmo com a existência de metodologias para tal finalidade, a adaptação também pode ser considerada uma contribuição, principalmente quando se apresenta um objetivo específico para esta adaptação.
+A conclusão que provém desta seção é o delineador do restante do trabalho. Pois, a metodologia de análise apresentada, será a mesma para avaliar o próprio trabalho. As diferenças, similaridades, e/ou falhas podem ser usadas como definição da contribuição. Esta melhoria é denominada de "Contribuição ao Método".
+\section{Metodologia de Análise}
+\section{Trabalhos Relacionados}
+\subsection{Trabalho 1}
+\subsection{Trabalho 2}
+\subsection{Trabalho 3}
+\subsection{Trabalho 4}
+\subsection{Trabalho 5}
+\subsection{Conclusão da Análise}
+\subsection{Considerações Finais}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAPÍTULO III %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Capítulo III - Arquitetura/Metodologia/Técnica}
+\section{Introdução}
+\indent\indent 
+Nesta seção, o autor apresenta o projeto da sua contribuição. Quando se trata de desenvolvimento de um software é recomendado que nesta seção o autor apresente a arquitetura do sistema, composta de: a) arquitetura em si (camadas que compõe o sistema); b) principais diagramas da Engenharia de Software que sintetizam o projeto, e; c) tecnologias de apoio usadas no desenvolvimento do software.
+Outros modelos de trabalho podem apresentar nesta seção a metodologia, a técnica e os instrumentos de análise e comparação. A fundamentação científica é fundamental para subsidiar a construção destas contribuições.   
+
+\section{Arquitetura do Sistema}
+\section{Tecnologias de Apoio}
+\section{Considerações Finais}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAPÍTULO IV %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Capítulo IV - Detalhes da Construção}
+\section{Introdução}
+\indent\indent 
+Este capítulo apresenta a criação e desenvolvimento da contribuição ao método, baseados na metodologia apresentada nos capítulos anteriores. Se for desenvolvimento de software, os pseudocódigos e/ou algoritmos devem ser detalhados. Em alguns casos o mais correto é apresentar um formalismo matemático do que foi elaborado, permitindo aos avaliadores maior possibilidade da verificação da contribuição.
+
+\section{Metodologia de Desenvolvimento}
+\subsection{Pseudocódigos}
+\subsection{Algoritmos}
+\subsection{Considerações Finais}
+Este capítulo apresentou a implementação de quatro protótipos com base na arquitetura proposta nos Capítulos 2 e 3 e mostrou as principais técnicas utilizadas na implementação do estudo de caso, que simula o Processo da Fotossíntese. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAPÍTULO V %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Capítulo V - Funcionamento do Sistema}
+\section{Introdução}
+\indent\indent 
+Nesta seção é apresentado o funcionamento daquilo que foi planejado no capítulo 4 (metodologia), construído no capítulo 5 (construção). Em muitos casos é necessário usar um estudo de caso para apresentar a contribuição (neste modelo de pesquisa o estudo de caso não é tão importante e sim a contribuição). Outros casos, quando existe uma preocupação com o estudo de caso, ligados diretamente ao objeto de estudo que deu origem ao problema, o mesmo (estudo de caso) pode ser apresentado no capítulo 4 (descrição necessária para definição da solução) e novamente nesta seção (aplicação da solução). 
+
+\section{Estudo de Caso}
+Quando os sacerdotes das religiões primitivas prestavam culto ao Sol, estavam certamente executando algo mais que um mero ato simbólico. De uma forma ou de outra, reconheciam um fato mais tarde confirmado pela ciência moderna: toda a vida terrestre depende em última análise das radiações solares \cite{Ta}.
+
+\section{Considerações Finais}
+Este capítulo apresentou o sistema, detalhando o funcionamento dos ambientes virtuais no contexto do estudo de caso do Processo da Fotossíntese, e explicitou como e qual informação é distribuída. 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAPÍTULO VI %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Capítulo VI - Comparação dos Protótipos e Análise dos Resultados}
+\section{Introdução}
+\indent\indent 
+Neste capítulo é apresentada uma análise da aplicação ou uso do que foi construído e demonstrado no capítulo anterior. Esta análise pode ser realizada usando normas (ISO/EIC) já estabelecidas. Pode ser por meio de testes de laboratório, pode ser simulada, pode ser aplicada em um contexto (universo/população/amostragem) real. E, também pode ser por meio da criação de uma metodologia própria para a análise.
+Na sequencia seguem alguns exemplos de avaliação de protótipos.
+
+\section{Ambiente Experimental}
+\section{Análise dos Resultados Obtidos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAPÍTULO VII %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Capítulo VII - Conclusões e Trabalhos Futuros}
+\section{Introdução}
+\indent\indent 
+Este capítulo tem como objetivo apresentar os principais pontos discutidos no trabalho, relacionar os possíveis trabalhos futuros advindos desta pesquisa e avaliar a principal contribuição deste trabalho para a área científica.
+
+\section{Conclusões}
+\indent\indent
+As conclusões devem estabelecer uma descrição sucinta e sintética daquilo que o autor concluiu ao desenvolver sua pesquisa. Deve haver um cuidado para que a mesma não seja óbvia e também que não seja impossível de identificar no texto. Conclusões sobre um ou outro tipo de tecnologia usada, conclusões sobre caminhos que foram tomados na condução da pesquisa são importantes. E, cabe ressaltar que este texto é do autor, portanto não cabe nesta seção a inserção de referências bibliográficas.
+
+\section{Trabalhos Futuros}
+\indent\indent
+Em todo trabalho científico, vários caminhos podem ser estabelecidos. Porém cabe geralmente ao autor definir um único para viabilizar a produção e divulgação da sua pesquisa. Estes outros caminhos podem ser apresentados nesta seção, detalhando claramente os motivos da não escolha pelos mesmos. 
+Também muito importante nesta seção, é vislumbrar o que ainda pode ser realizado na sequência do próprio trabalho. Toda pesquisa é provavelmente infinita, o que a classifica como concluída, é apenas um ponto de parada para sua divulgação. Portanto, outras contribuições são e serão sempre passíveis. É exatamente isso que cria a evolução, o desenvolvimento e gera inovação. Na área da Ciências Exatas, o termo "Estado da Arte" dá a exatidão desta sequencia. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{99}
+
+\bibitem[1]{el}Callioli, Carlos A., {\em Álgebra Linear e
+Aplicações}, Atual, São Paulo, 1990.
+\bibitem[2]{Ta}ANTUNES, Claudia et al. Realidade Virtual em Subvisão. In: 9º Encontro Português de Computação Gráfica, Fevereiro/2000. Marinha Grande - Portugal. Disponível em: <http://virtual.inesc.pt/9epcg/actas/resumos.html>. Acesso em 10.12.2002.
+
+\bibitem[3]{To}
+
+\bibitem[4]{W}
+
+\bibitem[5]{Z}
+\end{thebibliography}
+\end{document}
